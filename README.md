@@ -1,25 +1,11 @@
-# sia.codes blog
+# Static site generator e-commerce stack
 
-This blog started with the [Eleventy](https://github.com/11ty/eleventy) 11ty blog starter and Hylia. It's a mish-mash with a lot of custom code.
+11ty, netlify & stripe static site generator e-commerce stack extended from [sia.codes blog](https://sia.codes/posts/serverless-ecommerce-store/) to add shopping basket / cart, variants (eg: shirt sizes) and automatic creation of PLPs and PDPs from stipe product catalog data.
 
-## Design inspiration
+## Pre-requisites
 
-General
-- https://hankchizljaw.com/
-- https://mxb.dev/
-- https://www.zachleat.com/
-
-Cards
-- https://paulrobertlloyd.com/articles/
-- https://inclusive-components.design/cards/
-
-
-
-## Demos
-
-* [Netlify](https://eleventy-base-blog.netlify.com/)
-* [Get your own Eleventy web site on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)—seriously, just click OK a few times and it’s live—Netlify is amazing.
-* [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
+* [https://app.netlify.com/](Netlify Account)
+* [https://dashboard.stripe.com/login](Stripe Account)
 
 ## Getting Started
 
@@ -44,9 +30,26 @@ Specifically have a look at `.eleventy.js` to see if you want to configure any E
 npm install
 ```
 
-### 4. Edit _data/metadata.json
+### 4. Install netlfiy-cli globally
 
-### 5. Run Eleventy
+```
+npm install netlify-cli -g
+```
+
+See https://docs.netlify.com/cli/get-started/#installation for more info
+
+
+### 5. Create Netlify Site
+
+https://app.netlify.com > Sites > Add new site > Import from an existing project
+
+### 6. Netlify link to connect folder to a site on Netlify
+
+```
+ntl link
+```
+
+### 7. Run Eleventy
 
 ```
 npx eleventy
